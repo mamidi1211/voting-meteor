@@ -1,0 +1,17 @@
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        {{ >voteForm }}
+      </div>
+    </div>
+  </div>  
+
+  <div class="votes">
+      {{ #each votes }}
+          {{ >vote }}
+      {{ /each }}
+  </div>
+
+</body>
