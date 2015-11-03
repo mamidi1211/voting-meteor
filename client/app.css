@@ -1,0 +1,12 @@
+body 	{
+	padding-top:50px; 
+}
+.votes 	{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+}
+.vote 	{
+	width:25%;
+	margin:20px;
+}
