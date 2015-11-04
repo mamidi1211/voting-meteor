@@ -1,5 +1,6 @@
 <template name="vote">
 
+{{#if currentUser}}
 <div class="vote well well-lg" data-id="{{ _id }}">
     
     <h3 class="text-center">{{ question }}</h3>
@@ -10,6 +11,19 @@
             <span class="text">{{ text }}</span>
         </a>
     {{ /each }}
+    <input type="text" name="comment"> <input type="submit" value="Comment">
+</div>
+{{else}}
+<div class="vote well well-lg" data-id="{{ _id }}">
+        <h3 class="text-center">{{ question }}</h3>
+
+    {{ #each indexedArray choices }}
+        <a href="#" class="poll btn btn-primary btn-block" >
+            <span class="polls pull-right">{{ polls }}</span>
+            <span class="text">{{ text }}</span>
+        </a>
+    {{ /each }}
     
 </div>
+{{/if}}
 </template>

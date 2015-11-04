@@ -16,6 +16,11 @@ Template.vote.events({
       { $inc: action }
     );
 
+    var newComment = {
+      comment: event.target.comment.value
+    };
+    Votes.insert(newComment);
+
   }
 
 });

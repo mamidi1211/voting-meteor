@@ -25,6 +25,8 @@ Meteor.startup(function() {
     _.each(sampleVotes, function(vote) {
       Votes.insert(vote);
     
-  }
-
+  });
+}
 });
+
+
