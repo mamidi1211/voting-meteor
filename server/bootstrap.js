@@ -14,6 +14,7 @@ Meteor.startup(function() {
       {
         question: 'Do u like working with Startups?',
         choices: [
+
           { text: 'Yes', polls: 0 },
           { text: 'No', polls: 0 },
           { text: 'No Comments', polls: 0 }
@@ -23,9 +24,7 @@ Meteor.startup(function() {
 
     _.each(sampleVotes, function(vote) {
       Votes.insert(vote);
-      });
     
   }
 
 });
-
