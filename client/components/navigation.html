@@ -10,7 +10,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="{{pathFor 'home'}}">
-          <img src="/img/logo.png" alt="VotingApp"/>
+          <img src="/img/img.png" alt="VotingApp"/>
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navigation">
@@ -21,11 +21,23 @@
         {{#if currentUser}}
         	<li><a href="#" class="logout">Logout</a></li>
         	<li><a href="{{pathFor route='voteForm'}}">Create</a></li>
+            <li><a href="{{shareOnFacebookLink}}" target="_blank" class="btn btn-facebook">
+              <i class="fa fa-facebook"></i>
+            </a></li>
+            <li><a href="{{shareOnTwitterLink}}" target="_blank" class="btn btn-twitter">
+              <i class="fa fa-twitter"></i>
+            </a></li>
+            <li><a href="{{shareOnGooglePlusLink}}" target="_blank" class="btn btn-google-plus">
+              <i class="fa fa-google-plus"></i>
+            </a></li>
     	{{else}}
         <li><a href="{{pathFor route='register'}}">Register</a></li>
         <li><a href="{{pathFor route='login'}}">Login</a></li>
         {{/if}}
     </ul>
+
+    
+
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}
         </ul>
