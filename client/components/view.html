@@ -2,8 +2,25 @@
 
 <div class="votes">
         {{ #each votes }}
+            <!-- {{> spinner}} -->
             {{> vote }}
+
         {{ /each }}
 </div>
 
+<!-- <div class="polls-container">
+    <ul class="votes">
+      {{#each votes}} 
+        {{> vote}}
+      {{/each}}
+      {{#if nextPath}}
+        <a class="load-more btn btn-default" href="{{nextPath}}">Load more</a>
+      {{else}}
+        {{#unless ready}}
+          {{> spinner}}
+        {{/unless}}
+      {{/if}}
+    </ul>
+  </div>
+ -->
 </template>

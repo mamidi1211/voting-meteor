@@ -14,13 +14,29 @@ Template.vote.events({
     Votes.update(
       { _id: voteID }, 
       { $inc: action }
-    );
+    );    
+  },
 
+  
+  'submit form': function(event) {
+
+    event.preventDefault();
+    
     var newComment = {
-      comment: event.target.comment.value
+      comment: event.target.type_comment.value
     };
-    Votes.insert(newComment);
-
+    Comments.insert(newComment, function(error, results){
+      if(error)
+      {
+        console.log("Comments insertion error " + error.reason); 
+      }
+      else
+      {
+        //Router.go('home');  
+        console.log("comment inserted...");
+      }
+      
+    });
+    
   }
-
 });

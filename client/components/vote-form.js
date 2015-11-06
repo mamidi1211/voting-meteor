@@ -11,7 +11,8 @@ Template.voteForm.events({
         {  text: event.target.choice2.value, polls: 0 },
         {  text: event.target.choice3.value, polls: 0 }
       ],
-      createdBy: currentUser
+      createdBy: currentUser,
+      createdAt: new Date()
     };    
 
     Votes.insert(newVote, function(error, results){
